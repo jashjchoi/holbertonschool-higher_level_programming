@@ -1,13 +1,13 @@
 #include "lists.h"
 /**
 * insert_node - inserts a number into a sorted sll
-* @head: sll
+* @head: ptr to the head of sll
 * @number: input number
 * Return: address of the new node, or NULL if it failed
 */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *newnode = malloc(sizeof(listint_t));	
+	listint_t *newnode = malloc(sizeof(listint_t));
 	listint_t *prevnode = *head, *nextnode;
 
 	newnode->next = NULL;
