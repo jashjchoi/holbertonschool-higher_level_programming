@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""file for task 0"""
+
+
 class Square:
-    """Empty class"""
+    """Testing empty class Square"""
     pass
