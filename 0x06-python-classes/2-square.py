@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """file for task 2"""
 
+
 class Square:
     """define size validation for class Square"""
     def __init__(self, size=0):
