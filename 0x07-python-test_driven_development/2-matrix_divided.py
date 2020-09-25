@@ -5,14 +5,12 @@ by the parameter "div", and returns the divided matrix
 
 
 def matrix_divided(matrix, div):
-    """ Divides all elements of a matrix by "div"
-    checks if the entire list is int/float
-    checks if each list in the matrix are the same size
-    checks if "div" is an int/float or is 0
+    """ Divides all elements of a matrix by an int or float
+        returns new matrix containing the list of divided numbers
     """
     me1 = "matrix must be a matrix (list of lists) of integers/floats"
     me2 = "Each row of the matrix must have the same size"
-    res_matrix = []
+    result = []
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
@@ -29,6 +27,6 @@ def matrix_divided(matrix, div):
                 raise TypeError(me1)
             else:
                 inner_list.append(round(items / div, 2))
-        res_matrix.append(inner_list)
+        result.append(inner_list)
 
-    return res_matrix
+    return result
