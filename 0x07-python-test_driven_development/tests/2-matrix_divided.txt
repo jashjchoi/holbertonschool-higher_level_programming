@@ -67,3 +67,15 @@ No input:
     Traceback (most recent call last):
     ...
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Division with floats:
+    >>> matrix = [[1.4, 2.4, 3.4], [4.4, 5.4, 6.4]]
+    >>> print(matrix_divided(matrix, 0.2))
+    [[7.0, 12.0, 17.0], [22.0, 27.0, 32.0]]
+
+None argument:
+    >>> print(matrix_divided([1, 2, 3], None))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+

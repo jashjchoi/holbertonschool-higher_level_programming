@@ -39,29 +39,41 @@ Now use it with:
 Negative input:
     >>> print_square(-1)
     Traceback (most recent call last):
+    ...
     ValueError: size must be >= 0
 
 Multiple inputs:
     >>> print_square((1, 2, 3))
     Traceback (most recent call last):
+    ...
     TypeError: size must be an integer
 
 Float input:
-    >>> print_square(10.3)
+    >>> print_square(1.5123)
     Traceback (most recent call last):
+    ...
     TypeError: size must be an integer
 
 Negative float input:
-    >>> print_square(-10.3)
+    >>> print_square(-4.1)
     Traceback (most recent call last):
+    ...
     TypeError: size must be an integer
 
 Non-integer input:
     >>> print_square('hol')
     Traceback (most recent call last):
+    ...
     TypeError: size must be an integer
     
 No input:
     >>> print_square()
     Traceback (most recent call last):
+    ...
     TypeError: print_square() missing 1 required positional argument: 'size'
+
+None argument:
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
