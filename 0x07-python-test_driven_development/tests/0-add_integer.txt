@@ -1,4 +1,12 @@
-#testing add_integer
+======================
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is a text file to test the 0-add_integer module.  First import
+``0-add_integer`` from the ``add_integer`` module:
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
