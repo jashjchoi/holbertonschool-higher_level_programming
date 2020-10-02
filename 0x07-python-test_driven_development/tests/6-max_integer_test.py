@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Unittest for max_integer([..])
-"""
+"""Unittest for max_integer([..])"""
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
@@ -31,10 +30,16 @@ class TestMaxInteger(unittest.TestCase):
         test_list = [-1, -2, -3, -4]
         self.assertEqual(max_integer(test_list), -1)
 
+    def test_max_middle(self):
+        """ tests list with max num in the middle"""
+        test_list = [1, 2, 10, 4, 5]
+        self.assertEqual(max_integer(test_list), 10)
+
     def test_one_number(self):
         """ tests if list has only one number"""
         self.assertEqual(max_integer([3]), 3)
 
+    """Failed test cases"""
     def test_string(self):
         with self.assertRaises(TypeError):
             max_integer([1, 'H'])
