@@ -58,7 +58,7 @@ class Base:
     def load_from_file(cls):
         """adding the class method that returns a list of instances"""
         try:
-            with open(cls.__name__ +".json", "r", encoding="UTF-8") as f:
+            with open(cls.__name__ + ".json", "r", encoding="UTF-8") as f:
                 tmp = cls.from_json_string(f.read())
         except FileNotFoundError:
             return []
