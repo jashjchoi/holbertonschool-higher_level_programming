@@ -38,11 +38,11 @@ class Base:
                         in list_objs]))
 
     @staticmethod
-    def from_json_string(list_dictionaries):
+    def from_json_string(json_string):
         """returns a str dict list represented by a JSON"""
-        if list_dictionaries is None or len(list_dictionaries) == 0:
-            return "[]"
-        return json.loads(list_dictionaries)
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
@@ -50,7 +50,7 @@ class Base:
         if cls.__name__ == "Rectangle":
             dum = cls(1, 1)
         if cls.__name__ == "Square":
-            dum = cls(1, 1)
+            dum = cls(1)
         dum.update(**dictionary)
         return dum
 
