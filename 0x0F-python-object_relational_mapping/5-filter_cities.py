@@ -20,9 +20,10 @@ def filter_cities():
                          db=sys.argv[3])
     """creates a cursor and executes query"""
     cur = db.cursor()
-    cmd = """SELECT cities.name FROM states
-             INNER JOIN cities ON state_id = cities.state_id
-             WHERE states.name LIKE %s
+    cmd = """SELECT cities.name
+             FROM cities, states
+             WHERE BINARY states.name = %s
+             AND cities.state_id = states.id
              ORDER BY cities.id ASC"""
     res = cur.execute(cmd, (sys.argv[4],))
     states = cur.fetchall()
