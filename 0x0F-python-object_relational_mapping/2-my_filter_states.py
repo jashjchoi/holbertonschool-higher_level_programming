@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 
 
-def main():
+def display_st_table():
     """takes 4 arguments argv to list from db
     Only lists with states that matches the argument
         argv[1]: mysql username
@@ -34,4 +34,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    display_st_table()
