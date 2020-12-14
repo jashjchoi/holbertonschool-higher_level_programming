@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Displays name argument of states table"""
+"""takes in an argument and displays all values
+   in the states table of hbtn_0e_0_usa
+   where name matches the argument"""
 import MySQLdb
 import sys
 
 
-def display_st_table():
+def filter_states():
     """takes 4 arguments argv to list from db
     Only lists with states that matches the argument
         argv[1]: mysql username
@@ -34,4 +36,4 @@ def display_st_table():
 
 
 if __name__ == "__main__":
-    display_st_table()
+    filter_states()
