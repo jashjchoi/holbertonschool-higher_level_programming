@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-takes Github credentials (username and pw) 
+takes Github credentials (username and pw)
 and uses the Github API to display your id
 """
 import requests
