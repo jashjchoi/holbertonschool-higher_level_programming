@@ -3,7 +3,7 @@
   searches the second biggest integer in the list of arguments
 */
 
-if (!process.argv[2] || !process.argv[3]) {
+if (!process.argv[2] || !process.argv[3] || process.argv[1] === 1) {
   console.log('0');
 } else {
   const list = [];
