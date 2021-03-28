@@ -14,8 +14,8 @@ def first_state_obj():
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        res = session.query(State).first()
-        print("{}: {}".format(res.id, res.name))
+        ressult = session.query(State).first()
+        print("{}: {}".format(ressult.id, ressult.name))
     except:
         print("Nothing")
     session.close()
